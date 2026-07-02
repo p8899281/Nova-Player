@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova Player — Video &amp; PDF Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ===== Top bar ===== -->
+  <header class="topbar">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="markGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#ff5fa2"/>
+            <stop offset="0.55" stop-color="#a06bff"/>
+            <stop offset="1" stop-color="#4da3ff"/>
+          </linearGradient>
+        </defs>
+        <circle cx="20" cy="20" r="19" stroke="url(#markGrad)" stroke-width="2"/>
+        <path d="M16 13.5L28 20L16 26.5V13.5Z" fill="url(#markGrad)"/>
+      </svg>
+      <div class="brand-text">
+        <span class="brand-name">Nova</span><span class="brand-name accent">Player</span>
+      </div>
+    </div>
+
+    <div class="topbar-controls">
+      <label class="btn btn-gradient" for="fileInput">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <span>Open File</span>
+      </label>
+      <input type="file" id="fileInput" accept=".txt" hidden>
+
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <input type="text" id="searchInput" placeholder="Search video or PDF...">
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Status strip ===== -->
+  <div class="status-strip" id="statusStrip">
+    কোনো ফাইল লোড করা হয়নি — উপরের <strong>Open File</strong> বাটনে ক্লিক করে আপনার সোর্স <code>.txt</code> ফাইল সিলেক্ট করুন।
+  </div>
+
+  <!-- ===== Main content ===== -->
+  <main class="content">
+
+    <!-- Player panel -->
+    <section class="player-panel">
+      <div class="player-frame">
+        <video id="videoPlayer" controls playsinline></video>
+        <div class="player-placeholder" id="playerPlaceholder">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><path d="M10 9l5 3-5 3V9Z" fill="currentColor" opacity="0.6"/></svg>
+          <p>এখানে ভিডিও চলবে</p>
+        </div>
+      </div>
+      <div class="now-playing" id="nowPlaying">কোনো ভিডিও সিলেক্ট করা হয়নি</div>
+    </section>
+
+    <!-- List panel -->
+    <aside class="list-panel">
+      <div class="tabs">
+        <button class="tab active" data-type="video">
+          <span class="tab-icon">🎬</span> Videos <span class="tab-count" id="videoCount">0</span>
+        </button>
+        <button class="tab" data-type="pdf">
+          <span class="tab-icon">📄</span> PDFs <span class="tab-count" id="pdfCount">0</span>
+        </button>
+      </div>
+      <ul class="item-list" id="itemList">
+        <li class="empty-row">প্রথমে একটি .txt ফাইল লোড করুন</li>
+      </ul>
+    </aside>
+
+  </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

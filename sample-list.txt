@@ -1,0 +1,17 @@
+# Style 1: kono section header chara — link er extension (.pdf / video) dekhe
+# automatic type bujhe neyy. Simple list er jonno eta e sobcheye shohoj.
+Extra Class Notes :: https://example.com/notes/extra-class.pdf
+Bonus Lecture :: https://example.com/videos/bonus-lecture.mp4
+
+# Style 2: [VIDEOS] / [PDFS] header diye group kore likhle, sei header er
+# nichey thaka SOB line ei sei type hisebe count hobe — jotokkhon na notun
+# header ashe. Onek video/pdf ekshathe organize korte chaile eta useful.
+[VIDEOS]
+Reas (VOD) - Class-10 | Pair Formation [04-Dec-2024 14:30] :: https://example.com/videos/pair-formation.mp4
+Reas (VOD) - Class-11 | Counting Figures 25 :: https://example.com/videos/counting-figures-25.m3u8
+Reas (VOD) - Class-12 | Counting Figures 24 :: https://example.com/videos/counting-figures-24.mp4
+
+[PDFS]
+Reas (VOD) - Counting Figures | 25 :: https://example.com/pdfs/counting-figures-25.pdf
+Reas (VOD) - Counting Figures | 24 :: https://example.com/pdfs/counting-figures-24.pdf
+Reas (VOD) - Counting Figures | 23 :: https://example.com/pdfs/counting-figures-23.pdf
